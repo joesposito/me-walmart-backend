@@ -13,14 +13,15 @@ import java.util.List;
 @Setter
 public class Location {
     @Id
-    private int location_id;
+    private int locationId;
+
     private String name;
 
     @ManyToOne
     @JoinColumn(name = "location_type_id")
-    private LocationType location_type;
+    private LocationType locationType;
 
     @OneToMany(mappedBy="location")
     @JsonIgnore
-    private List<ProductLocation> product_locations;
+    private List<ProductLocation> productLocations;
 }

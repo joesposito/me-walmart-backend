@@ -12,42 +12,42 @@ import java.util.List;
 @Setter
 public class Product {
     @Id
-    private int product_id;
+    private int productId;
     private String upc;
-    private String full_name;
-    private String shortened_name;
+    private String fullName;
+    private String shortenedName;
     private BigDecimal price;
-    private String item_number;
+    private String itemNumber;
     private int department;
     private int category;
     private String size;
     private String color;
-    private String case_pack;
-    private String on_hand_count;
-    private String sales_floor_count;
-    private String backroom_count;
+    private String casePack;
+    private String onHandCount;
+    private String salesFloorCount;
+    private String backroomCount;
 
     @OneToMany(mappedBy="product")
-    private List<ProductLocation> product_locations;
+    private List<ProductLocation> productLocations;
 
     @Override
     public String toString() {
         return "Product{" +
-                "product_id=" + product_id +
+                "product_id=" + productId +
                 ", upc='" + upc + '\'' +
-                ", full_name='" + full_name + '\'' +
-                ", shortened_name='" + shortened_name + '\'' +
+                ", full_name='" + fullName + '\'' +
+                ", shortened_name='" + shortenedName + '\'' +
                 ", price=" + price +
-                ", item_number='" + item_number + '\'' +
+                ", item_number='" + itemNumber + '\'' +
                 ", department=" + department +
                 ", category=" + category +
                 ", size='" + size + '\'' +
                 ", color='" + color + '\'' +
-                ", case_pack='" + case_pack + '\'' +
-                ", on_hand_count='" + on_hand_count + '\'' +
-                ", sales_floor_count='" + sales_floor_count + '\'' +
-                ", backroom_count='" + backroom_count + '\'' +
-                ", product_locations=" + product_locations +
+                ", case_pack='" + casePack + '\'' +
+                ", on_hand_count='" + onHandCount + '\'' +
+                ", sales_floor_count='" + salesFloorCount + '\'' +
+                ", backroom_count='" + backroomCount + '\'' +
+                ", product_locations=" + productLocations +
                 '}';
     }
 }

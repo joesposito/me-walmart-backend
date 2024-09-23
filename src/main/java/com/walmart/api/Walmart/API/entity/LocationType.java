@@ -1,10 +1,7 @@
 package com.walmart.api.Walmart.API.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,10 +13,11 @@ import java.util.List;
 @Setter
 public class LocationType {
     @Id
-    private int location_type_id;
+    private int locationTypeId;
+
     private String type;
 
-    @OneToMany(mappedBy = "location_type")
+    @OneToMany(mappedBy = "locationType")
     @JsonIgnore
     private List<Location> location;
 }

@@ -4,15 +4,13 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.List;
-
 @Entity
 @Table(name="productlocation")
 @Getter
 @Setter
 public class ProductLocation {
     @Id
-    private int product_location_id;
+    private int productLocationId;
     private int quantity;
 
     @ManyToOne
