@@ -19,5 +19,5 @@ public class LocationType {
 
     @OneToMany(mappedBy = "locationType")
     @JsonIgnore
-    private List<Location> location;
+    private List<Location> locations;
 }

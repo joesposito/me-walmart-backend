@@ -15,6 +15,7 @@ public class Location {
     @Id
     private int locationId;
 
+    @Column(name = "location")
     private String name;
 
     @ManyToOne

@@ -14,12 +14,15 @@ public class UserService {
     public UserService(UserRepository userRepository){
         this.userRepository = userRepository;
     }
+
     public void createUser(User user){
         userRepository.save(user);
     }
 
+    // Get User by user_id if they exist.
     public Optional<User> getUser(UUID user_id){
         Optional<User> user = userRepository.findByUserId(user_id);
+
         return user;
     }
 }
